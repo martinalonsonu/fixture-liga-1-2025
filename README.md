@@ -9,7 +9,7 @@ El proyecto se encuentra desplegado en el siguiente enlace:
 ---
 
 ## Tecnologías usadas
-Este proyecto fue desarrollado con **React** usando **Vite** como herramienta de construcción.
+Este proyecto fue desarrollado con **React** usando **Vite** como herramienta de construcción. En materia de estilos se utilizó **Sass**
 
 ---
 
@@ -40,12 +40,25 @@ Este proyecto fue desarrollado con **React** usando **Vite** como herramienta de
 
 ### Cambiar la base en `vite.config.ts`
 Si necesitas actualizar la configuración de la base del proyecto (por ejemplo, para despliegues en rutas específicas), edita la propiedad `base` en el archivo `vite.config.ts`:
-```typescript
-  export default defineConfig({
-    base: '/<nueva_base>/', // Cambia aquí
-    ...
-  });```
+   ```js
+export default defineConfig({
+  base: '/<nueva_base>/', // Cambia aquí
+  ...
+});
+```
 
+### Cambiar los colores del diseño
+Los colores base del proyecto se encuentran definidos en el archivo: `src/styles/base/_variables.scss`
+Actualiza los valores de las variables de Sass según sea necesario.
 
+### Modificar la información del fixture
+Datos generales y constantes:
+Archivo: `src/utils/constants.ts`
+Modifica este archivo para actualizar textos, configuraciones generales o constantes del proyecto.
 
-###FFFFF
+### Información de partidos:
+Archivo: `src/utils/Matches.ts`
+Aquí se encuentran los datos de los partidos organizados bajo slugs específicos. Actualiza este archivo para cambiar detalles del fixture.
+
+### Configuraciones relacionadas con SEO
+El archivo `index.html` contiene todas las configuraciones relacionadas con SEO, como títulos, descripciones meta, y etiquetas de redes sociales. Edita este archivo para ajustar cualquier detalle relacionado con la optimización de motores de búsqueda.
