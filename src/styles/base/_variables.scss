@@ -1,0 +1,25 @@
+$urlAssets: 'https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod/';
+$slugCommonAssets: 'elementos-comunes/';
+$urlCommonAssets: $urlAssets + $slugCommonAssets;
+//fonts
+$icomoon: 'icomoon';
+$pathFonts: $urlCommonAssets + 'fonts/';
+
+$preloBold: 'Prelo-Bold';
+$preloMedium: 'Prelo-Medium';
+$preloExtraBold: 'Prelo-ExtraBold';
+$drukWide: 'DrukWide-Super';
+$barlow: "Barlow", sans-serif;
+$robotoBold: 'Roboto-BoldCondensed';
+
+$normal: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+
+
+//colors:
+$primary-color: #707070;
+$secondary-color: #F81017;
+$bg-other: #d8d8d8;

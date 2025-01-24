@@ -1,0 +1,21 @@
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;
+    opacity: 0;
+    background-color: $secondary-color;
+    color: #fff;
+    padding: 10px 10px 7px 11px;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+
+    &.scroll-btn {
+        opacity: 1;
+    }
+
+    &>img {
+        filter: invert(1);
+        max-width: 20px;
+    }
+}

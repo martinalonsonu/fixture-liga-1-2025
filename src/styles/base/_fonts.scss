@@ -1,0 +1,16 @@
+@import './variables';
+@import './mixins';
+
+@include fontPaths($pathFonts, $preloBold);
+@include fontPaths($pathFonts, $preloMedium);
+@include fontPaths($pathFonts, $preloExtraBold);
+@include fontPaths($pathFonts, $robotoBold);
+@include fontPaths($pathFonts, $drukWide);
+
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod/especiales/medallero-juegos-olimpicos-paris-2024-oro-plata-bron ce-clasificacion-general-usa-mexico-brasil-colombia-ecuador-argentina-peru-venezuela/fonts/Barlow-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}

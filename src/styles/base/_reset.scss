@@ -1,0 +1,99 @@
+/** ----------------------------*
+*           NORMALIZE           *
+* ----------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: $preloMedium;
+    color: $primary-color;
+}
+
+html,
+body,
+button,
+div,
+span,
+iframe,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+img,
+small,
+strong,
+b,
+u,
+i,
+ol,
+ul,
+li,
+form,
+label,
+article,
+aside,
+figure,
+figcaption,
+footer,
+menu,
+nav,
+section,
+summary,
+time,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+a,
+button,
+[type="button"],
+[type="submit"],
+[role="button"] {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font-family: inherit;
+    border-style: none;
+    background-color: transparent;
+}
+
+address {
+    font-style: normal;
+}
+
+.react-share__ShareButton {
+    display: flex;
+}

@@ -1,0 +1,42 @@
+.navbar {
+    width: 100%;
+    height: 41px;
+    background-color: #000;
+
+    &__content {
+        max-width: 984px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 24px;
+    }
+
+    &__link-especiales {
+        color: #fff;
+        text-decoration: none;
+        font: $bold 15px/18px $barlow;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &__btn {
+            list-style: none;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .navbar {
+        &__content {
+            margin: auto;
+        }
+    }
+}
