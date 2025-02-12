@@ -1,13 +1,9 @@
-import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import Selector from "./components/Selector"
-import Fixture from "./components/Fixture"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { urlAssets } from "./utils/constants"
-import Calendar from "./components/Calendar"
+import VideoPlayer from "./components/video-player";
+import TextSection from "./components/text-section";
 
 function App() {
-  const [page, setPage] = useState<number>(1)
   useEffect(() => {
     const btnUp = document.getElementById("btn-up");
 
@@ -34,17 +30,9 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <main>
-        <Header page={page} />
-        <Selector setPage={setPage} page={page} />
-        {page === 1 && (
-          <>
-            <p className="selector__message">Dale clic sobre tu equipo para ver sus partidos</p>
-            <Fixture />
-          </>
-        )}
-        {page === 2 && <Calendar />}
+        <VideoPlayer />
+        <TextSection />
       </main>
       <button id="btn-up" className="btn-up">
         <img src={`${urlAssets}/img/icons8-arriba.gif`} alt="Subir" />
