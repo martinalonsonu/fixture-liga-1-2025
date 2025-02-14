@@ -2,6 +2,8 @@ import { useEffect } from "react"
 import { urlAssets } from "./utils/constants"
 import VideoPlayer from "./components/video-player";
 import TextSection from "./components/text-section";
+import YearSection from "./components/year-section";
+import Teams from "./components/teams";
 
 function App() {
   useEffect(() => {
@@ -33,6 +35,8 @@ function App() {
       <main>
         <VideoPlayer />
         <TextSection />
+        <YearSection />
+        <Teams />
       </main>
       <button id="btn-up" className="btn-up">
         <img src={`${urlAssets}/img/icons8-arriba.gif`} alt="Subir" />

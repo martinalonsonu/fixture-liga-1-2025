@@ -22,43 +22,4 @@
         margin-bottom: 75px;
         font-weight: 700;
     }
-
-    &__description {
-        width: 410px;
-        background-color: #DD0F11;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 21px 0 22.14px;
-        margin: auto;
-        position: relative;
-        display: inline-block;
-        
-        &>p{
-            font-size: 24px;
-            line-height: 33px;
-            letter-spacing: -0.48px;
-            text-align: center;
-            margin-bottom: 8.45px;
-        }
-
-        &>img{
-            width: 119.14px;
-            height: 39.41px;
-        }
-
-        &::after{
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 52.5px solid transparent;
-            border-right: 52.5px solid transparent;
-            border-top: 38px solid #DD0F11; /* Cambia el color según necesites */
-        }
-    }
 }

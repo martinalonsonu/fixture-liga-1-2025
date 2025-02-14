@@ -13,6 +13,17 @@ html {
 }
 
 html,
+body {
+    background: #000; /* Fondo negro base */
+    background-image: 
+      linear-gradient(180deg, #2B2B2B03, #4D4D4D, #00000058);
+    background-repeat: repeat-y; /* Se repite en el eje Y */
+    background-size: 100% 36715px; /* 5252px (degradado) + 31463px (negro) */
+    background-position: 0 3240px; /* Iniciar el ciclo después de 3240px */
+  }
+  
+
+html,
 body,
 button,
 div,
