@@ -11,3 +11,16 @@
         color: #fff;
     }
 }
+
+
+@media(max-width:640px){
+    .teams{
+        padding-top: 35px;
+
+        &__text{
+            font-size: 20px;
+            line-height: 20px;
+            margin: 35px 15px 35px;
+        }
+    }
+}

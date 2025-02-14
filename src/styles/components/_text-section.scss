@@ -23,3 +23,16 @@
         font-weight: 700;
     }
 }
+
+
+@media(max-width: 640px){
+    .text-section{
+        padding: 40px 20px 35px;
+
+        &__first-text,
+        &__second-text{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

@@ -14,6 +14,9 @@ const VideoPlayer: React.FC = () => {
             <video autoPlay loop muted playsInline className={classes.video}>
                 <source src={`${domainAssets}video/video-presentacion.mp4`} type="video/mp4" />
             </video>
+            <a href="#text-section" className="video-section__arrow">
+                <img src={`${domainAssets}icons/arrow-down.png`} alt="Desplazamiento a la siguiente sección" />
+            </a>
         </section>
     )
 }

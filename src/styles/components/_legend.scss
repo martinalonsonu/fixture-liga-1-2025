@@ -1,0 +1,24 @@
+.legend{
+    width: 100%;
+    max-width: 388px;
+    margin: 158.41px auto 630px;
+
+    &>p{
+        font-size: 30px;
+        line-height: 47px;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+
+@media(max-width:640px){
+    .legend{
+        margin: 50px auto 120px;
+
+        &>p{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

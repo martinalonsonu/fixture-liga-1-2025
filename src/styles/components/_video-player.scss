@@ -6,6 +6,15 @@
     justify-content: center;
     align-items: center;
 
+    &__arrow{
+        position: absolute;
+        margin-top: 700px;
+        &>img{
+            width: 67.67px;
+            height: 33.46px;
+        }
+    }
+
     &__text{
         display: none;
     }
@@ -21,5 +30,13 @@
 @media(max-width:640px){
     .video-section{
         height: 780px;
+    }
+}
+
+@media(min-width:640px) and (max-width:1024px){
+    .video-section{
+        &__arrow{
+            margin-top: 500px;
+        }
     }
 }
