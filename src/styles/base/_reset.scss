@@ -14,12 +14,18 @@ html {
 
 html,
 body {
-    background: #000; /* Fondo negro base */
-    background-image: 
-      linear-gradient(180deg, #2B2B2B03, #4D4D4D, #00000058);
-    background-repeat: repeat-y; /* Se repite en el eje Y */
-    background-size: 100% 36715px; /* 5252px (degradado) + 31463px (negro) */
-    background-position: 0 3240px; /* Iniciar el ciclo después de 3240px */
+    background-color: #000;
+    background-image: url("https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/goleadores-liga-1-especial-dt/img/background.png");
+    background-repeat: repeat-y;
+    background-size: 100% auto; 
+    background-position: top 3240px center;
+}
+
+@media(max-width:640px){
+    html,
+    body{
+        background-position: top 2400px center;
+    }
   }
   
 

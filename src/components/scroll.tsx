@@ -82,7 +82,7 @@ const InfiniteScroll = () => {
 
   return (
     <div className="carousel">
-      <button className="nav left" onClick={prevImage}>&lt;</button>
+      <button className="nav left" onClick={prevImage}><p style={{position: 'relative', bottom: '4px'}}>&lt;</p></button>
       <div 
         className="image-container" 
         style={{ overflow: "hidden", width: `${imageWidth * imagesPerView}px` }}
@@ -109,7 +109,7 @@ const InfiniteScroll = () => {
           ))}
         </div>
       </div>
-      <button className="nav right" onClick={nextImage}>&gt;</button>
+      <button className="nav right" onClick={nextImage}><p style={{position: 'relative', bottom: '4px'}}>&gt;</p></button>
     </div>
   );
 };

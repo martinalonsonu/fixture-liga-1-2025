@@ -24,22 +24,41 @@
     }
   
     .nav {
+      width: 40px;
+      height: 40px;
       position: absolute;
-      color: white;
+      color: #000;
+      background: #fff;
       border: none;
+      border-radius: 50%;
       cursor: pointer;
-      padding: 10px;
-      font-size: 24px;
+      font-size: 45px;
       top: 50%;
-      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   
     .left {
-      left: 10px;
+      left: 100px;
+      z-index: 100;
     }
   
     .right {
-      right: 10px;
+      right: 100px;
+      z-index: 100;
     }
   }
   
+
+  @media(max-width: 640px){
+    .carousel{
+      .left{
+        left: 10px;
+      }
+
+      .right{
+        right: 10px;
+      }
+    }
+  }
