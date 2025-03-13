@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { domainAssets } from "../utils/constants";
 
 const teamAliases = [
-  "aas", "adt", "al", "alu", "ayacucho", "bin", "boys", "chankas",
-  "cienciano", "comu", "cus", "garci", "grau", "jp2", "melgar", "sc",
-  "shu", "u", "utc"
+  "ADT", "ALIANZA", "ALIANZA-ATLETICO", "ALIANZA-UNIVERSIDAD", "AYACUCHO-FC", "BINACIONAL", "BOYS", "CIENCIANO",
+  "COMERCIANTES-UNIDOS", "CRISTAL", "CUSCO-FC", "GARCILASO", "GRAU", "JUAN-PABLO-COLLEGE", "LOS-CHANKAS", "MELGAR",
+  "SPORT-HUANCAYO", "UNIVERSITARIO", "UTC"
 ];
 
 const images = teamAliases.map(alias => `${domainAssets}teams/${alias}.png`);
@@ -67,11 +67,11 @@ const InfiniteScroll = () => {
     setIndex((prevIndex) => prevIndex + 1);
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startX.current = e.touches[0].clientX;
   };
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     const deltaX = e.changedTouches[0].clientX - startX.current;
     if (deltaX > scrollThreshold) {
       prevImage();

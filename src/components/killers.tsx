@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { domainAssets } from "../utils/constants";
 
 interface FlourishListProps {
   startYear: number;
@@ -12,7 +11,7 @@ const flourishIds: Record<number, string> = {
   2022: "21398370",
   2021: "21398626",
   2020: "21399597",
-  2019: "21399597",
+  2019: "21399797",
   2018: "21454825",
   2017: "21454968",
   2016: "21465513",
@@ -58,9 +57,6 @@ const FlourishList: React.FC<FlourishListProps> = ({ startYear, endYear }) => {
               data-height="500px"
               style={{ width: "100%" }}
             ></div>
-            <a href="#video-section" className="killers__button">
-              <img src={`${domainAssets}icons/arrow-up.png`} alt="arrow-up" />
-            </a>
           </div>
         ))}
     </div>

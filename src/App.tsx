@@ -7,11 +7,12 @@ import FlourishList from "./components/killers";
 import { domainAssets } from "./utils/constants";
 
 function App() {
+
   useEffect(() => {
     const btnUp = document.getElementById("btn-up");
 
     const handleScroll = () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 3000) {
         btnUp?.classList.add("scroll-btn");
       } else {
         btnUp?.classList.remove("scroll-btn");
@@ -38,19 +39,20 @@ function App() {
         <TextSection />
         <YearSection />
         <Teams />
-        <FlourishList startYear={2024} endYear={2022}/>
-        <div className="text-img">
-          <img className="text-img__one--number" src={`${domainAssets}img/peruano-number.png`} alt="GOLEADOR PERUANO" width={70} height={144}/>
-          <img className="text-img__one--text" src={`${domainAssets}img/peruano-text.png`} alt="GOLEADOR PERUANO" width={412} height={61}/>
-        </div>
-        <FlourishList startYear={2021} endYear={2019}/>
-        <div className="text-img">
-          <img className="text-img__two" src={`${domainAssets}img/herrera.png`} alt="EMANUEL HERRERA" width={412} height={177}/>
-        </div>
-        <FlourishList startYear={2018} endYear={2018}/>
-        <div className="text-img">
-          <img className="text-img__three" src={`${domainAssets}img/african.png`} alt="AKÉ LOBA" width={348} height={105}/>
-        </div>
+        <div id="goleadores">
+          <FlourishList startYear={2024} endYear={2022}/>
+          <div className="text-img">
+            <img className="text-img__one--number" src={`${domainAssets}img/peruano-number.png`} alt="GOLEADOR PERUANO" width={70} height={144}/>
+            <img className="text-img__one--text" src={`${domainAssets}img/peruano-text.png`} alt="GOLEADOR PERUANO" width={412} height={61}/>
+           </div>
+          <FlourishList startYear={2021} endYear={2019}/>
+          <div className="text-img">
+             <img className="text-img__two" src={`${domainAssets}img/herrera.png`} alt="EMANUEL HERRERA" width={412} height={177}/>
+           </div>
+           <FlourishList startYear={2018} endYear={2018}/>
+          <div className="text-img">
+            <img className="text-img__three" src={`${domainAssets}img/african.png`} alt="AKÉ LOBA" width={348} height={105}/>
+          </div>
         <FlourishList startYear={2017} endYear={2015}/>
         <div className="text-img">
           <img className="text-img__four" src={`${domainAssets}img/alianza.png`} alt="ALIANZA LIMA" width={444} height={104}/>
@@ -66,6 +68,10 @@ function App() {
           <p>Diseño: Christian Marlow</p>
           <p>Programación: Martin Núñez</p>
         </div>
+        </div>
+        <button id="btn-up" className="btn-up">
+          <img src={`${domainAssets}icons/arrow-up.png`} alt="Subir" />
+        </button>
       </main>
     </>
   )

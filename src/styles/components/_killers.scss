@@ -40,16 +40,6 @@
             border-top: 18px solid #DD0F11; /* Cambia el color según necesites */
         }
     }
-
-    &__button{
-        position: relative;
-        bottom: 325px;
-        left: 467px;
-        &>img{
-            width: 53px;
-            height: 53px;
-        };
-    }
 }
 
 @media(max-width:640px){
@@ -65,34 +55,21 @@
 }
 
 
-@media (min-width:440px) and (max-width: 640px){
-    .killers{
-        &__button{
-            left: 200px;
-            &>img{
-                width: 30px;
-                height: 30px;
-            };
-        }
-    }
-}
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;
+    opacity: 0;
+    padding: 10px 10px 7px 11px;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
 
-@media (min-width:640px) and (max-width: 1024px){
-    .killers{
-        &__button{
-            left: 340px;
-            &>img{
-                width: 30px;
-                height: 30px;
-            };
-        }
+    &.scroll-btn {
+        opacity: 1;
     }
-}
 
-@media(max-width:440px){
-    .killers{
-        &__button{
-            display: none;
-        }
+    &>img {
+        max-width: 50px;
     }
 }
