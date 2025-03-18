@@ -8,7 +8,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: $preloMedium;
+    font-family: $suseMedium;
     color: $primary-color;
 }
 
@@ -96,4 +96,19 @@ address {
 
 .react-share__ShareButton {
     display: flex;
+}
+
+
+body {
+        background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/copa-libertadores-tabla-historica/img/liber2.jpg) no-repeat center center fixed;
+        background-size: cover;
+}
+    
+
+table tbody td {    
+    padding: 13.5px 10.5px;        
+}
+
+main{
+    padding-bottom: 40px;
 }

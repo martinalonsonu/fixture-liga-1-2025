@@ -9,18 +9,16 @@ const classes = {
     epigraph: 'header__epigraph'
 }
 
-const Header: React.FC<{ page: number }> = (prop) => {
-    const { page } = prop
+const Header: React.FC = () => {
+    
     const images = {
-        liga1: { src: `${urlAssets}/img/liga1.png`, alt: 'Liga 1' },
-        extra: { src: `${urlAssets}/img/apertura-clausura.png`, alt: 'Apertura y Clausura - Liga 1' }
+        libertadores: { src: `${urlAssets}/img/logo-libertadores.png`, alt: 'Copa Libertadores' },        
     }
     return (
         <header className={classes.container}>
-            <img src={images.liga1.src} alt={images.liga1.alt} width={156} height={57} className={classes.liga1} />
-            <h1 className={classes.title}>FIXTURE</h1>
-            <img src={images.extra.src} alt={images.extra.alt} width={377} height={92} className={classes.subtitle} />
-            {page === 1 && <p className={classes.epigraph}>{epigraph}</p>}
+            <img src={images.libertadores.src} alt={images.libertadores.alt} width={144} height={119} className={classes.liga1} />
+            <h1 className={classes.title}>TABLA HISTÓRICA DE FASE DE GRUPOS DESDE EL 2000</h1>            
+            <p className={classes.epigraph}>{epigraph}</p>
         </header>
     )
 }

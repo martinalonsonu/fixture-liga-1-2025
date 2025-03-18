@@ -5,17 +5,21 @@
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 29px;
 
     &__title {
-        font: $medium 40px/45px $drukWide;
-        color: $secondary-color;
-        font-style: italic;
+        font: $bold 30px/31px $suseBold;
+        letter-spacing: -0.75px;
+        text-shadow: 0px 3px 6px #000000C9;
+        color: $secondary-color;        
+        text-align: center;
+        margin-bottom: 9px;
     }
 
     &__first-icon {
-        width: 120px;
-        height: 43.85px;
+        width: 144px;
+        height: 119px;
+        margin-bottom: 5px;
     }
 
     &__second-icon {
@@ -25,7 +29,9 @@
     }
 
     &__epigraph {
-        font: $normal 14px/20px $preloMedium;
+        font: $normal 17px/19px $suseMedium;
+        color: #fff;
+        letter-spacing: -0.42px;
         text-align: center;
         margin: 0 10px;
     }
@@ -34,29 +40,5 @@
 @media(min-width:640px) {
     .header {
         max-width: 475px;
-        margin-top: 36px;
-
-        &__title {
-            font-size: 56px;
-            line-height: 59px;
-        }
-
-        &__first-icon {
-            width: 156px;
-            height: 57px;
-        }
-
-        &__second-icon {
-            width: 377px;
-            height: 92px;
-            margin-bottom: 15px;
-        }
-
-        &__epigraph {
-            height: 220px;
-            font-size: 17px;
-            line-height: 24px;
-            margin: 0;
-        }
     }
 }

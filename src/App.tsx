@@ -1,13 +1,16 @@
 import Navbar from "./components/Navbar"
 import Header from "./components/Header"
 import Selector from "./components/Selector"
-import Fixture from "./components/Fixture"
+import TableTeams from "./components/TableTeams"
 import { useEffect, useState } from "react"
 import { urlAssets } from "./utils/constants"
-import Calendar from "./components/Calendar"
+import TableCountry from "./components/TableCountry"
+import TableClasic from "./components/TableClasic"
+import { useFetch } from "./utils/useFetch"
 
 function App() {
   const [page, setPage] = useState<number>(1)
+  const {data, loading, groupedData} = useFetch()
   useEffect(() => {
     const btnUp = document.getElementById("btn-up");
 
@@ -36,15 +39,11 @@ function App() {
     <>
       <Navbar />
       <main>
-        <Header page={page} />
-        <Selector setPage={setPage} page={page} />
-        {page === 1 && (
-          <>
-            <p className="selector__message">Dale clic sobre tu equipo para ver sus partidos</p>
-            <Fixture />
-          </>
-        )}
-        {page === 2 && <Calendar />}
+        <Header />
+        <Selector setPage={setPage} page={page} />       
+        {page === 1 && <TableTeams data={data} loading={loading}/>}
+        {page===2 && <TableCountry groupedData={groupedData} />}
+        {page===3 && <TableClasic />}
       </main>
       <button id="btn-up" className="btn-up">
         <img src={`${urlAssets}/img/icons8-arriba.gif`} alt="Subir" />

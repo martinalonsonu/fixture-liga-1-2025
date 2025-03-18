@@ -1,0 +1,101 @@
+.table-clasic{
+    max-width: 349px;
+    width: 100%;
+    margin: auto;
+
+    &__clasic{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 36px;  
+        
+        &>p{
+            font: $bold 13px/31px $suseBold;
+            letter-spacing: -0.33px;
+            color: #F2C261;
+            text-shadow: 0px 3px 6px #000000C9;
+        }
+
+        &__description{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            
+            &>img{
+                width: 101px;
+                height: 101px;
+            }
+        }
+        
+        &__result{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+
+            &>p{
+                font: $bold 45px/31px $suseBold;
+                letter-spacing: -1.13px;
+                color: #F2C261;
+                text-shadow: 0px 3px 6px #000000C9;
+            }
+            
+            &>img{
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        &.first{
+            padding-top: 13px;
+        }
+    }
+    
+    &__resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 36px;
+        border-bottom: 1px solid #fff;
+
+        &>p{
+            margin-top: 14px;
+            font: $bold 13px/31px $suseBold;
+            letter-spacing: -0.33px;
+            color: #fff;
+            text-shadow: 0px 3px 6px #000000C9;
+        }
+        
+        &__numbers{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &--title{
+                font: $normal 13px/31px $suseMedium;
+                letter-spacing: -0.33px;
+                color: #fff;
+                text-shadow: 0px 3px 6px #000000C9;
+            }
+
+            &--number{
+                font: $normal 40px/31px $suseLight;
+                letter-spacing: -1px;
+                text-transform: uppercase;
+                text-shadow: 0px 3px 6px #000000C9;
+                color: #fff;
+                margin-top: 10px;
+            }
+        }
+    }
+}
