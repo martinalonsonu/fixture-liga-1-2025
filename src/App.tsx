@@ -46,7 +46,7 @@ function App() {
         {page===3 && <TableClasic />}
       </main>
       <button id="btn-up" className="btn-up">
-        <img src={`${urlAssets}/img/icons8-arriba.gif`} alt="Subir" />
+        <img src={`${urlAssets}/img/icons8-arriba.gif?d=1`} alt="Subir" />
       </button>
     </>
   )

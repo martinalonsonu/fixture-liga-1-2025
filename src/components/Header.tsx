@@ -1,5 +1,5 @@
 import React from 'react'
-import { urlAssets, epigraph } from '../utils/constants';
+import { urlAssets, epigraph, epigraph2 } from '../utils/constants';
 
 const classes = {
     container: 'header',
@@ -17,8 +17,8 @@ const Header: React.FC = () => {
     return (
         <header className={classes.container}>
             <img src={images.libertadores.src} alt={images.libertadores.alt} width={144} height={119} className={classes.liga1} />
-            <h1 className={classes.title}>TABLA HISTÓRICA DE FASE DE GRUPOS DESDE EL 2000</h1>            
-            <p className={classes.epigraph}>{epigraph}</p>
+            <h1 className={classes.title}>TABLA HISTÓRICA DE<br/>LA COPA LIBERTADORES</h1>            
+            <p className={classes.epigraph}>{epigraph} <span>{epigraph2}</span></p>
         </header>
     )
 }

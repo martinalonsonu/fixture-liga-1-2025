@@ -12,7 +12,8 @@ const slugEspecial = 'copa-libertadores-tabla-historica';
 const urlEspecial = `${domainMarca}${slugEspecial}/index.html`;
 const urlAssets = `${domainAssets}${slugEspecial}`;
 const urlClubIcons = `${urlAssets}/img/logos`
-const epigraph = "n neque, lacinia nec arcu vitae, malesuada scelerisque neque. Cras vitae pulvinar tortor. Morbi convallis et tortor in tempor. Maecenas vehicula sagi";
+const epigraph = "La tabla de todos los tiempos de los participantes que alguna vez participaron en el torneo.";
+const epigraph2 = "Revisa en qué posición se encuentra tu equipo.";
 
 const googleSheetKey = '17GCeDNH6wlQCdZ4U-KVi5a6q5wVlHtNyB2nNUNfAllo';
 export {
@@ -30,5 +31,6 @@ export {
     urlAssets, 
     urlClubIcons,
     epigraph,
+    epigraph2,
     googleSheetKey
 }

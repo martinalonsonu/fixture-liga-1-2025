@@ -106,9 +106,15 @@ body {
     
 
 table tbody td {    
-    padding: 13.5px 10.5px;        
+    padding: 5px 5px;        
 }
 
 main{
     padding-bottom: 40px;
+}
+
+@media(min-width:640px) {
+    table tbody td {    
+        padding: 13.5px 10.5px;        
+    }
 }

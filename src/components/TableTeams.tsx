@@ -28,15 +28,39 @@ const TableTeams: React.FC<Props> = (props) => {
     ]
 
     const orderTeams = (code: keyof TeamData) => {
-        setSortedData((prevData) => [...prevData].sort((a, b) => (b[code] as number) - (a[code] as number)));
+        setSortedData((prevData) =>
+            [...prevData].sort((a, b) => {
+                const numA = typeof a[code] === "string" ? parseFloat((a[code] as string).replace(",", ".")) : (a[code] as number);
+                const numB = typeof b[code] === "string" ? parseFloat((b[code] as string).replace(",", ".")) : (b[code] as number);
+                return numB - numA;
+            })
+        );
     };
 
-    return <table className='table-teams'>
-        <thead style={{position: 'sticky', top: '20px'}}>
+    return (
+        <>
+                    <div className='table-teams__scroll-icon'>
+            <svg
+    width={20}
+    height={20}
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"    
+    fill='#fff'
+  >
+    <path
+      d="M291.746 258.115v-84.781c0-30.875-25.125-56-56-56s-56 25.125-56 56v119.43c-10.366-8.697-23.303-13.629-36.893-13.629-16.177 0-31.708 6.854-42.573 18.812-21.01 23.024-19.642 58.547 2.658 80.149.028.029.039.06.067.089l94.328 91.149h208v-176zm70.92 168.552H213.333s-74.738-70.448-82.009-77.073c-8.273-7.536-8.87-20.354-1.333-28.63 7.539-8.274 20.357-8.87 28.631-1.333 5.541 5.046 41.952 35.036 41.952 35.036l16.506-8.534v-172.8c0-10.31 8.358-18.666 18.666-18.666 10.31 0 18.667 8.357 18.667 18.667v117.875l108.253 34.125zm-253.19-220.292c-2.77-10.575-4.396-21.609-4.396-33.041 0-72.042 58.613-130.667 130.666-130.667s130.667 58.625 130.667 130.667c0 11.432-1.626 22.466-4.397 33.041l-40.472-14.01c1.364-6.146 2.202-12.48 2.202-19.031 0-48.524-39.476-88-88-88s-88 39.476-88 88c0 6.552.839 12.885 2.202 19.03z"
+      fillRule="evenodd"
+    />
+  </svg>
+  <p>Scrollea horizontalmente</p>
+            </div>        
+        <div className='table-teams__container'>
+            <table className='table-teams'>
+        <thead style={{position: 'sticky'}}>
             <tr>
                 <th></th>
                 <th></th>
-                {thRow.map((el,i)=><th className='table-teams__item__column'>
+                {thRow.map((el,i)=><th className={`table-teams__item__column ${el.code === 'points' && 'points'}`}>
                     <button type='button' onClick={()=>orderTeams(el.code)} key={i} className='table-teams__item__column__button'>
                         <p>{el.name}</p>
                         <svg
@@ -78,6 +102,9 @@ const TableTeams: React.FC<Props> = (props) => {
         ))}
         </tbody>
     </table>
+        </div>
+        </>
+    )
 }
 
 export default TableTeams

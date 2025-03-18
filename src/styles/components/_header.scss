@@ -34,11 +34,24 @@
         letter-spacing: -0.42px;
         text-align: center;
         margin: 0 10px;
+
+        &>span{
+            color: #F2C261;
+            font-family: $suseBold;
+        }
     }
 }
 
 @media(min-width:640px) {
     .header {
-        max-width: 475px;
+        max-width: 523px;
+
+        &__title{
+            max-width: 457px;
+        }
+
+        &__epigraph{
+            margin: 0;
+        }
     }
 }
