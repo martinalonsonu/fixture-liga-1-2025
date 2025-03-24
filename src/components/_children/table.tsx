@@ -5,8 +5,7 @@ import { teams } from '../../utils/Matches'
 interface Props {
     infoDate: {
         date: number,
-        matches: Array<{ home: string, away: string }>,
-        rest: string
+        matches: Array<{ home: string, away: string }>,        
     }
     setTeamSelected: React.Dispatch<React.SetStateAction<string>>
 }
@@ -23,7 +22,7 @@ const classes = {
 }
 
 const FixtureChildTable: React.FC<Props> = (props) => {
-    const { infoDate: { date = 1, matches = [], rest = '' } = {}, setTeamSelected } = props
+    const { infoDate: { date = 1, matches = [] } = {}, setTeamSelected } = props
     return (
         <div id={`fecha-${date}`} className={classes.container}>
             <div className={classes.date}>
@@ -37,7 +36,7 @@ const FixtureChildTable: React.FC<Props> = (props) => {
                         type='button'
                         onClick={() => setTeamSelected(match.home)}>
                         <img
-                            src={`${urlClubIcons}/${match.home}.png`}
+                            src={`${urlClubIcons}/${match.home}.png?d=1`}
                             alt={teams[match.home]}
                             className={classes.icon} />
                         <p>{teams[match.home]}</p>
@@ -49,11 +48,10 @@ const FixtureChildTable: React.FC<Props> = (props) => {
                         type='button'
                         onClick={() => setTeamSelected(match.away)}>
                         <p>{teams[match.away]}</p>
-                        <img src={`${urlClubIcons}/${match.away}.png`} alt={teams[match.away]} className={classes.icon} />
+                        <img src={`${urlClubIcons}/${match.away}.png?d=1`} alt={teams[match.away]} className={classes.icon} />
                     </button>
                 </div>
-            ))}
-            <div className={classes.rest}><p>Descansa {teams[rest]}</p></div>
+            ))}            
         </div>
     )
 }

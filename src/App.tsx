@@ -1,13 +1,11 @@
-import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import Selector from "./components/Selector"
-import Fixture from "./components/Fixture"
-import { useEffect, useState } from "react"
-import { urlAssets } from "./utils/constants"
-import Calendar from "./components/Calendar"
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Selector from "./components/Selector";
+import Fixture from "./components/Fixture";
+import { useEffect } from "react";
+import { urlAssets, urlClubIcons } from "./utils/constants";
 
 function App() {
-  const [page, setPage] = useState<number>(1)
   useEffect(() => {
     const btnUp = document.getElementById("btn-up");
 
@@ -36,21 +34,24 @@ function App() {
     <>
       <Navbar />
       <main>
-        <Header page={page} />
-        <Selector setPage={setPage} page={page} />
-        {page === 1 && (
-          <>
-            <p className="selector__message">Dale clic sobre tu equipo para ver sus partidos</p>
-            <Fixture />
-          </>
-        )}
-        {page === 2 && <Calendar />}
+        <Header />
+        <img
+          src={`${urlAssets}/img/dt-ec.png?d=2`}
+          alt="DT | El Comercio"
+          className="header__dt"
+          width={125}
+        />
+        <Selector />
+        <p className="selector__message">
+          Dale clic sobre tu equipo para ver sus partidos
+        </p>
+        <Fixture />
       </main>
       <button id="btn-up" className="btn-up">
         <img src={`${urlAssets}/img/icons8-arriba.gif`} alt="Subir" />
       </button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

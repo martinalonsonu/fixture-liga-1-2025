@@ -15,7 +15,7 @@
 
     &__first-icon {
         width: 120px;
-        height: 43.85px;
+        height: 56px;
     }
 
     &__second-icon {
@@ -28,6 +28,13 @@
         font: $normal 14px/20px $preloMedium;
         text-align: center;
         margin: 0 10px;
+    }
+
+    &__dt{
+        position: absolute;
+        top: 0;
+        right: 24px;
+        width: 80px;
     }
 }
 
@@ -42,21 +49,27 @@
         }
 
         &__first-icon {
-            width: 156px;
-            height: 57px;
+            width: 210px;
+            height: 98px;
+            margin-bottom: 7px;
         }
 
         &__second-icon {
             width: 377px;
             height: 92px;
-            margin-bottom: 15px;
+            margin-bottom: 13px;
         }
 
         &__epigraph {
             height: 220px;
-            font-size: 17px;
-            line-height: 24px;
+            font-size: 15px;
+            line-height: 18px;
             margin: 0;
+        }
+
+        &__dt{
+            width: 125px;
+            right: 0;
         }
     }
 }
