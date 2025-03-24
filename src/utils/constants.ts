@@ -1,13 +1,13 @@
 const brand = "Depor";
-const twitterAccount = "tuitdepor";    
-const urlBrand = "https://depor.com";
+const twitterAccount = "elcomercio_peru";    
+const urlBrand = "https://elcomercio.pe";
 const logo = 'logo-depor-white';
-const urlPortadaEspeciales = "https://especiales.depor.com/especiales-multimedia-nndd/index.html";
-const domainMarca = "https://especiales.depor.com/";
+const urlPortadaEspeciales = "https://elcomercio.pe";
+const domainMarca = "https://especiales.elcomercio.pe/?q=especiales/";
 const domainAssets = "https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/";
 const urlCommonAssets = `${domainAssets}elementos-comunes/`;
 
-const titleEspecial = 'Fixture Liga 1 2025: descarga el calendario y programación de Torneo Apertura y Clausura de Alianza Lima, Universitario, Sporting Cristal y otros clubes';
+const titleEspecial = 'TABLA HISTÓRICA DE LA COPA LIBERTADORES';
 const slugEspecial = 'copa-libertadores-tabla-historica';
 const urlEspecial = `${domainMarca}${slugEspecial}/index.html`;
 const urlAssets = `${domainAssets}${slugEspecial}`;

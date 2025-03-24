@@ -4,17 +4,13 @@
     margin: auto;    
 
     &__container{
-        overflow-x: scroll;
-        padding: 0 10px;
+        overflow-x: auto;
+        padding: 0 10px;    
     }
 
-    &__scroll-icon{
-        display: flex;
-        font: $normal 10px/19px $suseMedium;
-        color: #fff;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
+    &__thead{
+        position: sticky;
+        top: 10px;
     }
 
     &__item{        
@@ -31,12 +27,13 @@
             }
             
             &__button{
-                font: $normal 10px/19px $suseMedium;
+                font: $normal 10px/15px $suseMedium;
                 display: flex;
                 align-items: center;
                 gap: 5px;
                 &>p{
                     width: 46px;
+                    color: #000;
                 }
                 &>svg{
                     width: 10px;
@@ -58,8 +55,8 @@
             gap: 7px;
             
             &>img{
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
             }
 
             &__name{
@@ -99,10 +96,6 @@
             display: none;
         }
 
-        &__container{
-            overflow: auto;
-            padding: 0;
-        }
         &__item{
 
             &__row{
@@ -124,4 +117,138 @@
         }
     }
 
+}
+
+@media(max-width:640px){
+    .table-teams{
+        display: flex;
+        flex-direction: column;
+
+        &__thead{
+            display: flex;
+            justify-content: end;
+        }
+
+        &__item{
+            &__column{
+                &__button{
+
+                    &>svg{
+                        width: 5px;
+                        height: 12px;
+                    }
+                }
+            }
+            &__team {
+                gap: 4px;
+                max-width: 140px;
+            }
+            &__number{
+                font-size: 10px;
+            }
+        }
+    }
+
+    
+
+    thead {
+        margin: 0 16px;
+        &>tr{
+            display: flex;
+            justify-content: end;            
+
+            &>th{                
+                &:first-child{
+                    width: 0;
+                }
+
+                &:nth-child(2){
+                    width: 0;
+                }
+
+                &:nth-child(3){
+                    width: 42px;
+                    &>button{
+                        &>p{
+                            width: 28px;
+                        }
+                    }
+                }
+
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7){
+                    width: 28px;
+                    &>button{
+                        gap: 0;
+                        &>p{
+                            width: 14px;
+                        }
+                    }
+                }
+
+                &:nth-child(8){
+                    width: 28px;
+                    &>button{
+                        gap: 0;
+                        &>p{
+                            width: 22px;
+                            font-size: 8px;
+                        }
+                    }
+                }
+                &:nth-child(9){
+                    width: 43px;
+                    &>button{
+                        gap: 0;
+                        &>p{
+                            width: 36px;
+                            font-size: 8px;
+                        }
+                    }
+                }
+                width: 28px;
+            }
+        }
+    }
+
+    tbody{
+        margin: 0 16px;
+
+        &>tr{
+            display: flex;
+            width: 100%;
+            justify-content: end;
+            &>td{
+                margin: auto 0;
+                padding: 0;
+                &:nth-child(1){
+                    
+                    padding: 5px 4px;
+                }
+                &:nth-child(2){
+                    flex: 1 1;
+                    width: 120px;
+                    padding: 5px 4px;
+                }
+
+                &:nth-child(3){
+                    width: 38px;
+                }
+
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8),{
+                    width: 28px;                    
+                }
+
+                &:nth-child(9){
+                    width: 43px;
+                }
+
+            }
+        }}
 }
