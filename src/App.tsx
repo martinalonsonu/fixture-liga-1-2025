@@ -40,6 +40,12 @@ function App() {
       <Navbar />
       <main>
         <Header />
+        <img
+          src={`${urlAssets}/img/dt-ec.png?d=2`}
+          alt="DT | El Comercio"
+          className="header__dt"
+          width={125}
+        />
         <Selector setPage={setPage} page={page} />       
         {page === 1 && <TableTeams data={data} loading={loading}/>}
         {page===2 && <TableCountry groupedData={groupedData} />}

@@ -111,6 +111,9 @@ table tbody td {
 
 main{
     padding-bottom: 40px;
+    max-width: 980px;
+    margin: auto;
+    position: relative;
 }
 
 @media(min-width:640px) {

@@ -40,6 +40,13 @@
             font-family: $suseBold;
         }
     }
+
+    &__dt{
+        position: absolute;
+        top: 0;
+        right: 24px;
+        width: 80px;
+    }
 }
 
 @media(min-width:640px) {
@@ -52,6 +59,11 @@
 
         &__epigraph{
             margin: 0;
+        }
+
+        &__dt{
+            width: 125px;
+            right: 0;
         }
     }
 }

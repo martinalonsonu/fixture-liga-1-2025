@@ -3,6 +3,14 @@
     width: 100%;
     margin: auto;    
 
+    &__spinner{
+        max-width: 673px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
     &__container{
         overflow-x: auto;
         padding: 0 10px;    
