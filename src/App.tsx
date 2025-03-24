@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Selector from "./components/Selector";
 import Fixture from "./components/Fixture";
 import { useEffect } from "react";
-import { urlAssets, urlClubIcons } from "./utils/constants";
+import { urlAssets } from "./utils/constants";
 
 function App() {
   useEffect(() => {
