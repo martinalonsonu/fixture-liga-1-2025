@@ -12,7 +12,7 @@ const slugEspecial = 'copa-libertadores-tabla-historica';
 const urlEspecial = `${domainMarca}${slugEspecial}/index.html`;
 const urlAssets = `${domainAssets}${slugEspecial}`;
 const urlClubIcons = `${urlAssets}/img/logos`
-const epigraph = "La tabla de todos los tiempos de los participantes que alguna vez participaron en el torneo.";
+const epigraph = "La tabla de todos los tiempos de los clubes que alguna vez jugaron el torneo, actualizada partido a partido.";
 const epigraph2 = "Revisa en qué posición se encuentra tu equipo.";
 
 const googleSheetKey = '17GCeDNH6wlQCdZ4U-KVi5a6q5wVlHtNyB2nNUNfAllo';
