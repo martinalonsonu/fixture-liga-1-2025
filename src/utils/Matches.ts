@@ -135,6 +135,127 @@ export const matches: Array<{date:number, matches: Array<{ home: string, away: s
         { home: "unsaac", away: "mannucci" },
         { home: "flamengo", away: "alianza" },
       ]
+    },
+    {
+      date: 12,
+      matches: [
+        { away: "melgar", home: "unsaac" },
+        { away: "vallejo", home: "killas" },
+        { away: "cristal", home: "flamengo" },
+        { away: "biavo", home: "mannucci" },
+        { away: "ancash", home: "universitario" },
+        { away: "alianza", home: "ilucan" }        
+      ]      
+    },
+    {
+      date: 13,
+      matches: [
+        { away: "ilucan", home: "melgar" },
+        { away: "mannucci", home: "alianza" },
+        { away: "universitario", home: "vallejo" },
+        { away: "flamengo", home: "ancash" },
+        { away: "killas", home: "cristal" },
+        { away: "unsaac", home: "biavo" },
+      ]
+    },
+    {
+      date: 14,
+      matches: [
+        { away: "universitario", home: "killas" },
+        { away: "vallejo", home: "flamengo" },
+        { away: "biavo", home: "alianza" },
+        { away: "cristal", home: "ilucan" },
+        { away: "ancash", home: "unsaac" },
+        { away: "melgar", home: "mannucci" },
+      ]
+    },
+    {
+      date: 15,
+      matches: [
+        { away: "flamengo", home: "universitario" },
+        { away: "alianza", home: "melgar" },
+        { away: "unsaac", home: "cristal" },
+        { away: "mannucci", home: "ancash" },
+        { away: "ilucan", home: "vallejo" },
+        { away: "killas", home: "biavo" },
+      ]
+    },
+    {
+      date: 16,
+      matches: [
+        { away: "melgar", home: "biavo" },
+        { away: "killas", home: "flamengo" },
+        { away: "ancash", home: "alianza" },
+        { away: "vallejo", home: "unsaac" },
+        { away: "cristal", home: "mannucci" },
+        { away: "universitario", home: "ilucan" },
+      ]
+    },
+    {
+      date: 17,
+      matches: [
+        { away: "melgar", home: "flamengo" },
+        { away: "illucan", home: "killas" },
+        { away: "unsaac", home: "universitario" },
+        { away: "biavo", home: "ancash" },
+        { away: "alianza", home: "cristal" },
+        { away: "mannucci", home: "vallejo" },
+      ]
+    },
+    {
+      date: 18,
+      matches: [
+        { away: "flamengo", home: "ilucan" },
+        { away: "vallejo", home: "alianza" },
+        { away: "killas", home: "unsaac" },
+        { away: "ancash", home: "melgar" },
+        { away: "universitario", home: "mannucci" },
+        { away: "cristal", home: "biavo" },
+      ]
+    },
+    {
+      date: 19,
+      matches: [
+        { away: "alianza", home: "universitario" },
+        { away: "biavo", home: "vallejo" },
+        { away: "melgar", home: "cristal" },
+        { away: "mannucci", home: "killas" },
+        { away: "unsaac", home: "flamengo" },
+        { away: "ancash", home: "ilucan" },
+      ]
+    },
+    {
+      date: 20,
+      matches: [
+        { away: "flamengo", home: "mannucci" },
+        { away: "universitario", home: "biavo" },
+        { away: "vallejo", home: "melgar" },
+        { away: "cristal", home: "ancash" },
+        { away: "ilucan", home: "unsaac" },
+        { away: "killas", home: "alianza" },
+      ]
+    },
+    {
+      date: 21,
+      matches: [
+        { away: "biavo", home: "flamengo" },
+        { away: "melgar", home: "killas" },
+        { away: "ancash", home: "vallejo" },
+        { away: "mannucci", home: "ilucan" },
+        { away: "cristal", home: "universitario" },
+        { away: "alianza", home: "unsaac" },
+      ]
+    },
+    {
+      date: 22,
+      matches: [
+        { away: "universitario", home: "melgar" },
+        { away: "ilucan", home: "biavo" },
+        { away: "vallejo", home: "cristal" },
+        { away: "killas", home: "ancash" },
+        { away: "unsaac", home: "mannucci" },
+        { away: "flamengo", home: "alianza" },
+      ]
     }
   ];
   
