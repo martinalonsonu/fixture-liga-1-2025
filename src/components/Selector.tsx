@@ -1,50 +1,37 @@
-import React from 'react'
-import { matches } from '../utils/Matches'
+import React from "react";
 
 const classes = {
-    container: 'selector',
-    select: 'selector__select',
-    button: 'selector__button'
-}
+  container: "selector",
+  select: "selector__select",
+  button: "selector__button",
+};
 
 type SelectorType = {
-    setPage: React.Dispatch<React.SetStateAction<number>>
-    page: number
-}
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+  page: number;
+};
 
 const Selector: React.FC<SelectorType> = (prop) => {
-    const { setPage, page } = prop
-    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const { value } = event.target
-        if (value === '') window.location.href = ""
-        else window.location.href = `#fecha-${value}`
-    }
+  const { setPage, page } = prop;
 
-    const handleClick = () => setPage(2)
+  const handleClick = (i: number) => setPage(i);
 
-    return (
-        <section className={`${classes.container} page-${page}`}>
-            {page === 1 && (
-                <>
-                    <select
-                        name="Selecciona la fecha"
-                        className={classes.select}
-                        id=""
-                        onChange={handleChange}
-                        aria-label='Selecciona la fecha'>
-                        <option value="">Selecciona la fecha</option>
-                        {matches.map((element) => (
-                            <option key={element.date} value={element.date}>Fecha {element.date}</option>
-                        ))}
-                    </select>
-                    <button className={classes.button} onClick={handleClick}>Descarga e imprime</button>
-                </>
-            )}
-            {
-                page === 2 && <button onClick={() => setPage(1)} type="button" className={classes.button}>Inicio</button>
-            }
-        </section>
-    )
-}
+  return (
+    <section className={classes.container}>
+      <button
+        className={`${classes.button} ${page === 1 && "selected"}`}
+        onClick={() => handleClick(1)}
+      >
+        Por equipos
+      </button>
+      <button
+        className={`${classes.button} ${page === 2 && "selected"}`}
+        onClick={() => handleClick(2)}
+      >
+        Por jugadores
+      </button>
+    </section>
+  );
+};
 
-export default Selector
+export default Selector;

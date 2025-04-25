@@ -1,60 +1,65 @@
 .selector {
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px auto;
-    padding: 0 20px;
-    gap: 20px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 21px auto 32px;
+  padding: 0 20px;
+  gap: 20px;
+
+  &__select {
+    width: 100%;
+    height: 47px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 5px;
+    color: black;
+  }
+
+  &__button {
+    width: 100%;
+    height: 47px;
+    border-radius: 10px;
+    background: #818181;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5),
+      0px 5px 5px rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 700;
+    letter-spacing: -0.42px;
+
+    &.selected {
+      background: $secondary-color;
+    }
+  }
+
+  &__message {
+    font: $normal 12px/13px $preloBold;
+    text-align: center;
+    padding-top: 14px;
+  }
+}
+
+@media (min-width: 640px) {
+  .selector {
+    flex-direction: row;
+    max-width: 475px;
+    padding: 0 39px;
+    margin-top: 33px;
+    padding: 0;
+    gap: 18px;
 
     &__select {
-        width: 100%;
-        height: 34px;
-        background: #fff;
-        border-radius: 10px;
-        padding: 0 5px;
-        color: black;
+      width: 212px;
     }
 
     &__button {
-        width: 100%;
-        height: 34px;
-        border-radius: 10px;
-        background: $secondary-color;
-        color: #fff;
+      width: 155px;
     }
-
-    &__message {
-        font: $normal 12px/13px $preloBold;
-        text-align: center;
-        padding-top: 14px;
-    }
-
-    &.page-2 {
-        justify-content: center;
-    }
-}
-
-@media (min-width:640px) {
-    .selector {
-        flex-direction: row;
-        max-width: 475px;
-        padding: 0 39px;
-        margin-top: 33px;
-        padding: 0;
-        gap: 0;
-
-        &__select {
-            width: 212px;
-        }
-
-        &__button {
-            width: 155px;
-        }
-
-        &.page-2 {
-            margin-top: 13px;
-        }
-    }
+  }
 }

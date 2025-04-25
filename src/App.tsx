@@ -1,13 +1,12 @@
-import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import Selector from "./components/Selector"
-import Fixture from "./components/Fixture"
-import { useEffect, useState } from "react"
-import { urlAssets } from "./utils/constants"
-import Calendar from "./components/Calendar"
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Selector from "./components/Selector";
+import { useEffect, useState } from "react";
+import { urlAssets } from "./utils/constants";
+import SelectComponent from "./components/Select";
 
 function App() {
-  const [page, setPage] = useState<number>(1)
+  const [page, setPage] = useState<number>(1);
   useEffect(() => {
     const btnUp = document.getElementById("btn-up");
 
@@ -36,21 +35,15 @@ function App() {
     <>
       <Navbar />
       <main>
-        <Header page={page} />
+        <Header />
         <Selector setPage={setPage} page={page} />
-        {page === 1 && (
-          <>
-            <p className="selector__message">Dale clic sobre tu equipo para ver sus partidos</p>
-            <Fixture />
-          </>
-        )}
-        {page === 2 && <Calendar />}
+        <SelectComponent />
       </main>
       <button id="btn-up" className="btn-up">
-        <img src={`${urlAssets}/img/icons8-arriba.gif`} alt="Subir" />
+        <img src={`${urlAssets}/icons8-arriba.gif`} alt="Subir" />
       </button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
