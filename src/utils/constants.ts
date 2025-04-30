@@ -10,7 +10,7 @@ const domainAssets =
 const urlCommonAssets = `${domainAssets}elementos-comunes/`;
 
 const titleEspecial =
-  "Fixture Liga 1 2025: descarga el calendario y programación de Torneo Apertura y Clausura de Alianza Lima, Universitario, Sporting Cristal y otros clubes";
+  "Minutos de menores en Liga 1: de Sub17 a Sub23 en 2025 en el fútbol peruano | Tabla Fixture Liga 1 2025: descarga el calendario y programación de Torneo Apertura y Clausura de Alianza Lima, Universitario, Sporting Cristal y otros clubes";
 const slugEspecial =
   "minutos-menores-liga-1-sub17-sub23-2025-futbol-peruano-tabla";
 const urlEspecial = `${domainMarca}${slugEspecial}/index.html`;

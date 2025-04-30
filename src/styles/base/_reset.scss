@@ -3,13 +3,13 @@
 * ----------------------------- */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-family: $preloMedium;
-    color: $primary-color;
+  scroll-behavior: smooth;
+  font-family: $preloMedium;
+  color: $primary-color;
 }
 
 html,
@@ -49,10 +49,10 @@ section,
 summary,
 time,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -65,7 +65,7 @@ header,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 a,
@@ -73,27 +73,45 @@ button,
 [type="button"],
 [type="submit"],
 [role="button"] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 button {
-    font-family: inherit;
-    border-style: none;
-    background-color: transparent;
+  font-family: inherit;
+  border-style: none;
+  background-color: transparent;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 .react-share__ShareButton {
-    display: flex;
+  display: flex;
+}
+
+.spinner {
+  width: 156px;
+  height: 156px;
+  margin: 50px auto;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #f81017 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #f81017);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
 }

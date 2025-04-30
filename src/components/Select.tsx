@@ -3,12 +3,16 @@ import { useFetch } from "../utils/useFetch";
 import SelectChild from "./_children/SelectChild";
 
 const SelectComponent: FC = () => {
-  const { processedTeams } = useFetch();
+  const { processedTeams, loading } = useFetch();
   return (
     <section className="select__container">
-      {processedTeams.map((team, i) => (
-        <SelectChild team={team} position={i + 1} key={team.slug} />
-      ))}
+      {loading ? (
+        <div className="spinner" />
+      ) : (
+        processedTeams.map((team, i) => (
+          <SelectChild team={team} position={i + 1} key={team.slug} />
+        ))
+      )}
     </section>
   );
 };

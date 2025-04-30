@@ -4,6 +4,7 @@ import Selector from "./components/Selector";
 import { useEffect, useState } from "react";
 import { urlAssets } from "./utils/constants";
 import SelectComponent from "./components/Select";
+import PlayersFilter from "./components/PlayersFilter";
 
 function App() {
   const [page, setPage] = useState<number>(1);
@@ -37,7 +38,8 @@ function App() {
       <main>
         <Header />
         <Selector setPage={setPage} page={page} />
-        <SelectComponent />
+        {page === 1 && <SelectComponent />}
+        {page === 2 && <PlayersFilter />}
       </main>
       <button id="btn-up" className="btn-up">
         <img src={`${urlAssets}/icons8-arriba.gif`} alt="Subir" />

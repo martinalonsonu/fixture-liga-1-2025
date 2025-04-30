@@ -2,11 +2,14 @@
   display: flex;
   height: 46px;
   justify-content: space-between;
+  align-items: center;
   border: 0.3px solid #707070;
   border-radius: 4px;
   background: radial-gradient(circle, #ffffff, #dadada);
   box-shadow: 0px 3px 6px #00000029;
   cursor: pointer;
+  position: relative;
+  z-index: 5;
 
   &__flag {
     width: 32px;
@@ -17,10 +20,22 @@
   &__container {
     max-width: 568px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto 50px;
     gap: 14px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 560px) {
+      max-width: 320px;
+    }
+
+    &.alternative {
+      padding-top: 10px;
+      max-width: 473px;
+      @media (max-width: 560px) {
+        max-width: 320px;
+      }
+    }
   }
 
   &__position {
@@ -45,11 +60,19 @@
       font-size: 20px;
       line-height: 21px;
       color: #000;
+      text-align: left;
+
+      @media (max-width: 560px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 
   &__first {
     display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   &__second {
@@ -63,6 +86,92 @@
       line-height: 21px;
       color: #000;
       font-weight: 700;
+
+      @media (max-width: 560px) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &__open {
+    width: 100%;
+    border: 0.3px solid #707070;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: radial-gradient(circle, #ffffff, #dadada);
+    position: relative;
+    bottom: 18px;
+    z-index: 1;
+    padding: 15px;
+
+    &__wrap {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    &__date {
+      width: fit-content;
+      background: #000;
+      font-size: 20px;
+      line-height: 21px;
+      color: #fff;
+      padding: 3px 6px;
+
+      @media (max-width: 560px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &__data {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > img {
+        width: 40px;
+
+        @media (max-width: 560px) {
+          width: 30px;
+        }
+      }
+      &__text {
+        width: 100%;
+        color: #000;
+        border-bottom: 1px solid #707070;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 21px;
+
+        @media (max-width: 560px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        &__alternative {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          &__text {
+            color: #000;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &__no-players {
+      text-align: center;
+      color: #000;
+
+      @media (max-width: 560px) {
+        font-size: 12px;
+      }
     }
   }
 }

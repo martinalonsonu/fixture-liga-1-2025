@@ -7,8 +7,9 @@ export interface PlayerData {
   team: string; // Este campo debería contener el slug del equipo
   player: string;
   birthday: string;
-  position: number;
+  position: string;
   minutes: number;
+  image: string;
 }
 
 interface FetchState {
@@ -21,10 +22,12 @@ interface FetchState {
     minutes: number;
     players: PlayerData[];
   }>;
+  filterPlayers: PlayerData[] | null;
 }
 
 export const useFetch = (): FetchState => {
   const [data, setData] = useState<PlayerData[] | null>(null);
+  const [filterPlayers, setFilterPlayers] = useState<PlayerData[] | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [processedTeams, setProcessedTeams] = useState<
@@ -41,7 +44,7 @@ export const useFetch = (): FetchState => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = "SELECT A, B, C, D, E, F";
+        const query = "SELECT A, B, C, D, E, F, G";
         const response = await fetch(
           `https://docs.google.com/spreadsheets/d/${googleSheetKey}/gviz/tq?tq=${encodeURIComponent(
             query
@@ -59,13 +62,33 @@ export const useFetch = (): FetchState => {
                 team: cells[1]?.v?.toString() || "",
                 player: cells[2]?.v?.toString() || "",
                 birthday: cells[3]?.v?.toString() || "",
-                position: Number(cells[4]?.v) || 0,
+                position: cells[4]?.v || "",
                 minutes: Number(cells[5]?.v) || 0,
+                image: cells[6]?.v || "https://postimg.cc/0MbKs625",
               };
             }
           ) || [];
 
         setData(rawData);
+
+        const playerFilterData = rawData.reduce(
+          (acc: PlayerData[], current) => {
+            const existingPlayer = acc.find(
+              (player) => player.player === current.player
+            );
+            if (existingPlayer) {
+              existingPlayer.minutes += current.minutes;
+            } else {
+              acc.push({ ...current });
+            }
+            return acc;
+          },
+          []
+        );
+
+        setFilterPlayers(
+          playerFilterData.sort((a, b) => b.minutes - a.minutes)
+        );
 
         const slugToTeamMap = new Map<string, (typeof teamsArray)[0]>();
         teamsArray.forEach((team) => {
@@ -107,5 +130,6 @@ export const useFetch = (): FetchState => {
     error,
     loading,
     processedTeams,
+    filterPlayers,
   };
 };
