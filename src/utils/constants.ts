@@ -1,12 +1,11 @@
-const brand = "Depor";
-const twitterAccount = "tuitdepor";
-const urlBrand = "https://depor.com";
-const logo = "logo-depor-white";
-const urlPortadaEspeciales =
-  "https://especiales.depor.com/especiales-multimedia-nndd/index.html";
-const domainMarca = "https://especiales.depor.com/";
+const brand = "El Comercio";
+const twitterAccount = "elcomercio_peru";
+const urlBrand = "https://elcomercio.pe";
+const logo = "logo-elcomercio-white";
+const urlPortadaEspeciales = "https://elcomercio.pe";
+const domainMarca = "https://especiales.elcomercio.pe/?q=especiales/";
 const domainAssets =
-  "https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod/";
+  "https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/";
 const urlCommonAssets = `${domainAssets}elementos-comunes/`;
 
 const titleEspecial =
