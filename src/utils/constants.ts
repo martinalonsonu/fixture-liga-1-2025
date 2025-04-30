@@ -16,7 +16,7 @@ const urlEspecial = `${domainMarca}${slugEspecial}/index.html`;
 const urlAssets = `${domainAssets}${slugEspecial}`;
 const urlClubIcons = `${urlAssets}/img/logos`;
 const epigraph =
-  "Desde Sub17 hasta Sub23. A continuación, te mostramos a los equipos que más minutos le dieron a los jóvenes valores del fútbol peruano.";
+  "Desde Sub17 hasta Sub23. Te mostramos la tabla actualizada, semana a semana, de los equipos que más minutos le dieron a los jóvenes valores del fútbol peruano.";
 
 const googleSheetKey = "1z4dxQe8Zf5Ty6nS6atdcCUBAkE20GNArsrzghWIXgpw";
 export {
